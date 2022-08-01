@@ -12,6 +12,7 @@ struct ContentView: View {
     @EnvironmentObject var viewModel: ViewModel
     
     @State private var showFilter = false
+    @State private var contentMode: [ContentMode] = ContentMode.allCases
     
     var body: some View {
         NavigationView {
@@ -44,14 +45,33 @@ struct ContentView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: ToolbarItemPlacement.navigationBarTrailing) {
-                    Button {
-                        showFilter.toggle()
+                    Menu {
+                        Picker("Mode", selection: $viewModel.photoContentMode) {
+                            ForEach(contentMode, id: \.self) {
+                                Text(String(describing: $0).capitalized)
+                            }
+                        }
+                        Toggle("Border", isOn: $viewModel.showBorder)
+                        Slider(value: $viewModel.cellSize, in: 100...300) {
+                            Text("Size")
+                        }
+                        Button {
+                            viewModel.cellSize += 20
+                        } label: {
+                            Label("Zoom In", systemImage: "plus.magnifyingglass")
+                        }
+                        .disabled(viewModel.cellSize >= 300)
+                        
+                        
+                        Button {
+                            viewModel.cellSize -= 20
+                        } label: {
+                            Label("Zoom Out", systemImage: "minus.magnifyingglass")
+                        }
+                        .disabled(viewModel.cellSize <= 100)
+
                     } label: {
                         Image(systemName: "line.3.horizontal.decrease.circle")
-                    }
-                    .popover(isPresented: $showFilter) {
-                        FilterView()
-                            .frame(width: 320, height: 412)
                     }
                 }
             }

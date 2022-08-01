@@ -11,7 +11,7 @@ import Photos
 class ViewModel: ObservableObject {
     
     @Published var images = [UIImage]()
-    @Published var cellSize: CGFloat = 150
+    @Published var cellSize: CGFloat = 140
     @Published var showBorder: Bool = false
     @Published var photoContentMode: ContentMode = .fill
     

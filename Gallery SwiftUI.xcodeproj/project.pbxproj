@@ -12,7 +12,6 @@
 		41AB35982896E1160013AD26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41AB35972896E1160013AD26 /* Assets.xcassets */; };
 		41AB359B2896E1160013AD26 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41AB359A2896E1160013AD26 /* Preview Assets.xcassets */; };
 		41AB35A22896E1490013AD26 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AB35A12896E1490013AD26 /* ViewModel.swift */; };
-		41AB35A42896E7B30013AD26 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AB35A32896E7B30013AD26 /* FilterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +21,6 @@
 		41AB35972896E1160013AD26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41AB359A2896E1160013AD26 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		41AB35A12896E1490013AD26 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		41AB35A32896E7B30013AD26 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +56,6 @@
 				41AB35A12896E1490013AD26 /* ViewModel.swift */,
 				41AB35932896E1150013AD26 /* Gallery_SwiftUIApp.swift */,
 				41AB35952896E1150013AD26 /* ContentView.swift */,
-				41AB35A32896E7B30013AD26 /* FilterView.swift */,
 				41AB35972896E1160013AD26 /* Assets.xcassets */,
 				41AB35992896E1160013AD26 /* Preview Content */,
 			);
@@ -143,7 +140,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41AB35A42896E7B30013AD26 /* FilterView.swift in Sources */,
 				41AB35962896E1150013AD26 /* ContentView.swift in Sources */,
 				41AB35A22896E1490013AD26 /* ViewModel.swift in Sources */,
 				41AB35942896E1150013AD26 /* Gallery_SwiftUIApp.swift in Sources */,
